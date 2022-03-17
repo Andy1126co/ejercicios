@@ -39,9 +39,18 @@ def secret(select):
     pista = [' ___ ']*len(select)
     one_string ="".join(pista)
     return one_string
-        
+
+def replace_word():
+  pass
+
+def comparar(secret,word):
+  for i in secret:
+    if i == word:
+      pass
+  
 def run():
-    print(secret(select(read())))
+    palabra = select(read())
+    print(secret(palabra),palabra)
     
 
 if __name__ =="__main__":
