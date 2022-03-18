@@ -54,10 +54,10 @@ def comparar(word,letter):
         
         
 def reemplazo(secreto,posicion,letra):
-    #posiciones ya no entra un valor entra una lista,
-    # toca recorrer la lista y hacer los reemplazos
+    
     separacion =secreto.rsplit("  ")
-    separacion[posicion]=letra
+    for i in posicion:
+        separacion[i]=letra
     return separacion
             
     
@@ -65,21 +65,28 @@ def reemplazo(secreto,posicion,letra):
 
   
 def run():
-   
-    letra = input("Ingresa una letra: ")    
-    escoger = select(read())    
-    secreto = secret(escoger)
-    print(f'primer secreto: {secreto}',escoger)
-    print("//////////////////////////////")
-    prueba = comparar(escoger,letra)
-    #cambio = reemplazo(secreto,prueba,letra)
-    #cambio ="  ".join(cambio)
-    #if prueba == "True":
-     #   secreto = cambio
+    escoger = select(read())
+    while True:
+        letra = input("Ingresa una letra: ")    
+            
+        secreto = secret(escoger)
+        print(f'primer secreto: {secreto}',escoger)
+        print("//////////////////////////////")
+        prueba = comparar(escoger,letra)
+        cambio = reemplazo(secreto,prueba,letra)
+        cambio ="  ".join(cambio)
+        secreto = cambio
+        print(f'impresion de cambio: {cambio}')
+        print(f'segundo secreto: {secreto}',escoger)
+        if secreto == escoger:
+            break
+        
     
     #print(secreto,escoger,"--->"+str(prueba))
     #print(f'el cambio: {cambio}')
-    print(f'impresion de reemplazo: {prueba}')
+    
+    
+    
         
 
 if __name__ =="__main__":
