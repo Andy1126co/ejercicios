@@ -21,7 +21,7 @@ def normalize(s):
 def read():
     palabras =[]
     
-    with open("./archivos/palabras.txt","r",encoding="utf-8") as f:
+    with open("./archivos/varias_a.txt","r",encoding="utf-8") as f:
         for line in f :
             
             if line !="\n":               
@@ -40,18 +40,47 @@ def secret(select):
     one_string ="".join(pista)
     return one_string
 
-def replace_word():
-  pass
 
-def comparar(secret,word):
-  for i in secret:
-    if i == word:
-      pass
+
+def comparar(word,letter):
+    posiciones=[]
+    c = 0
+    for i in word:
+        c = c + 1
+        if word.find(letter,c) != -1 and word.find(letter,c)not in posiciones:
+            posiciones.append(word.find(letter,c))
+    
+    return posiciones   
+        
+        
+def reemplazo(secreto,posicion,letra):
+    #posiciones ya no entra un valor entra una lista,
+    # toca recorrer la lista y hacer los reemplazos
+    separacion =secreto.rsplit("  ")
+    separacion[posicion]=letra
+    return separacion
+            
+    
+    
+
   
 def run():
-    palabra = select(read())
-    print(secret(palabra),palabra)
+   
+    letra = input("Ingresa una letra: ")    
+    escoger = select(read())    
+    secreto = secret(escoger)
+    print(f'primer secreto: {secreto}',escoger)
+    print("//////////////////////////////")
+    prueba = comparar(escoger,letra)
+    #cambio = reemplazo(secreto,prueba,letra)
+    #cambio ="  ".join(cambio)
+    #if prueba == "True":
+     #   secreto = cambio
     
+    #print(secreto,escoger,"--->"+str(prueba))
+    #print(f'el cambio: {cambio}')
+    print(f'impresion de reemplazo: {prueba}')
+        
 
 if __name__ =="__main__":
     run()
