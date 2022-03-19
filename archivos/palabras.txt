@@ -1054,8 +1054,11 @@ encontrar
 obtener, conseguir
 crear
 creer
-comenzar, iniciar, empezar
-terminar, acabar
+comenzar
+iniciar
+empezar
+terminar
+acabar
 abandonar
 dejar
 entrar
@@ -1073,11 +1076,14 @@ destruir
 deber
 poder
 conocer
-entender, comprender
+entender
+comprender
 atar
 saber
 trabajar
-separar, dividir, partir
+separar
+dividir
+partir
 descansar
 dormir
 despertar
@@ -1085,28 +1091,33 @@ aceptar
 rechazar
 descartar
 acompañar
-pedir, solicitar
+pedir
+solicitar
 pretender
 proponer
 sugerir
-usar, utilizar
+usar
+utilizar
 hacer
 fabricar
-arreglar, reparar
+arreglar
+reparar
 explicar
 mostrar
 tratar
 evitar
-probar, intentar
-comprobar, verificar
+probar
+intentar
+comprobar
+verificar
 variar
 esperar
-necesitar, precisar
+necesitar
+precisar
 significar
 parecer
 distinguir
 Adverbios
-Adverbios de cantidad
 más
 menos
 muy
@@ -1121,7 +1132,8 @@ bastante
 justo
 demasiado
 etcétera
-solo, solamente
+solo
+solamente
 tan
 tanto
 todo
@@ -1131,7 +1143,6 @@ cuándo
 cuánto
 cuál, cuáles
 dónde
-Adverbios de calidad
 bien
 mal
 mejor
@@ -1191,34 +1202,41 @@ hoy
 mañana
 de nuevo
 próximamente
-Adverbios de ubicación
-arriba, encima
-abajo, debajo
-adelante, delante
-atrás, detrás
-centro, medio
+arriba
+encima
+abajo
+debajo
+adelante
+delante
+atrás
+detrás
+centro
+medio
 alrededor
 enfrente
 cerca
 lejos
-adentro, dentro
-afuera, fuera
+adentro
+dentro
+afuera
+fuera
 aquí
 acá
 ahí
 allá
 allí
-Otros adverbios
 así
 adónde
 dónde
 Preposiciones
-a, al
+a
+al
 ante
 bajo
 con
 contra
-de, del
+de
+del
 desde
 durante
 en
@@ -1252,17 +1270,27 @@ yo
 tú
 vos
 usted
-él, ella, ello
-nosotros, nosotras
-vosotros, vosotras
+él
+ella
+ello
+nosotros
+nosotras
+vosotros
+vosotras
 ustedes
-ellos, ellas
-mí, conmigo
-ti, contigo
-sí, consigo
+ellos
+ellas
+mí
+conmigo
+ti
+contigo
+sí
+consigo
 me
 te
-le, la, lo
+le
+la
+lo
 se
 nos
 os

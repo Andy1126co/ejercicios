@@ -1,5 +1,6 @@
 from random import random, randrange
 from re import S
+import collections
 
 
 def datos():
@@ -21,7 +22,7 @@ def normalize(s):
 def read():
     palabras =[]
     
-    with open("./archivos/varias_a.txt","r",encoding="utf-8") as f:
+    with open("./archivos/palabras.txt","r",encoding="utf-8") as f:
         for line in f :
             
             if line !="\n":               
@@ -46,11 +47,16 @@ def comparar(word,letter):
     posiciones=[]
     c = 0
     for i in word:
-        c = c + 1
+        
         if word.find(letter,c) != -1 and word.find(letter,c)not in posiciones:
             posiciones.append(word.find(letter,c))
+        c = c + 1
     
-    return posiciones   
+    return posiciones  
+
+
+    
+    return posiciones 
         
         
 def reemplazo(secreto,posicion,letra):
@@ -60,32 +66,36 @@ def reemplazo(secreto,posicion,letra):
         separacion[i]=letra
     return separacion
             
-    
+
     
 
   
 def run():
     escoger = select(read())
+    secreto = secret(escoger)
+    cont = 0
     while True:
-        letra = input("Ingresa una letra: ")    
-            
-        secreto = secret(escoger)
-        print(f'primer secreto: {secreto}',escoger)
+        letra = input("Ingresa una letra: ") 
+                
+        
         print("//////////////////////////////")
         prueba = comparar(escoger,letra)
         cambio = reemplazo(secreto,prueba,letra)
-        cambio ="  ".join(cambio)
+        cambio ="  ".join(cambio)                  
         secreto = cambio
-        print(f'impresion de cambio: {cambio}')
-        print(f'segundo secreto: {secreto}',escoger)
-        if secreto == escoger:
+        literal ="_"
+                    
+        print(f'palabra secreta: {secreto}')
+        if cambio.find(literal,cont)==-1:
+            print("*****************************************")
+            print(f'Lo lograste')
             break
+        if cont == len(escoger):
+            cont = 0
+        cont = cont + 1
         
-    
-    #print(secreto,escoger,"--->"+str(prueba))
-    #print(f'el cambio: {cambio}')
-    
-    
+           
+         
     
         
 
